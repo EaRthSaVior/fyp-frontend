@@ -1,0 +1,573 @@
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background: #efefef;
+}
+.my-dropdown-toggle:after {
+  display: none;
+}
+.navbar {
+background: #ffffff;
+min-height : 68px;
+}
+.invisible-text {
+  visibility: hidden;
+}
+
+
+
+.navbrand{
+  font-family:"Sans serif";
+}
+.popup-alert {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 200px;
+}
+.star-icon-starred {
+  color: #479aff;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.star-icon-normal {
+  color: #000000;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.star-icon:hover .star-icon-starred,
+.star-icon:hover .star-icon-normal {
+  transform: scale(1.2); /* Increase the size without affecting layout */
+}
+.password-toggle {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.question-set-layout {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media (max-width: 576px) {
+  .question-set-layout {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.form-control.is-invalid{
+  background-image: none;
+}
+.header {
+  z-index: 10;
+  position: sticky;
+
+  top: 0;
+  background: #efefef;
+  margin-bottom: 20px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease; /* Add a transition for a smooth effect */
+}
+
+.header-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow style when at the top */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-content1 .input {
+margin-bottom: 5px;
+}
+.header-content1 {
+  align-items: center;
+  justify-content: space-between;
+ max-width: 936px;
+ margin:auto;
+
+}
+.back-button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.back-button:hover{
+border-bottom: 2px solid#000000;
+}
+.arrow-icon {
+  font-size: 24px;
+}
+
+.header-button {
+  margin-left: auto;
+}
+.Container{
+  max-width: 1080px;
+}
+.quiz-card {
+  margin-bottom: 15px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input__field {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.input__label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.2s ease-out;
+}
+
+.input__field:focus + .input__label,
+.input__field:not(:placeholder-shown) + .input__label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #333;
+  background-color: #fff;
+  padding: 0 4px;
+}
+.input__field:focus + .input__label1,
+.input__field:not(:placeholder-shown) + .input__label1 {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #333;
+  background-color: #8ff392;
+  padding: 0 4px;
+}
+.input__field:focus + .input__label2,
+.input__field:not(:placeholder-shown) + .input__label2 {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #333;
+  background-color: #f1cc94;
+  padding: 0 4px;
+}
+.input__field:focus + .input__label3,
+.input__field:not(:placeholder-shown) + .input__label3 {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #333;
+  background-color: #acd6f9;
+  padding: 0 4px;
+}
+
+.input__field:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.edit-setting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-container {
+  flex-basis: calc(33.33% - 10px); /* Adjust the percentage value as per your spacing requirements */
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .edit-setting {
+    flex-direction: column;
+  }
+
+  .input-container {
+    flex-basis: 100%;
+  }
+}
+/* //EditQuiz */
+.distractor-input .input:last-child {
+  margin-bottom: 0; /* Remove the bottom margin for the last distractor input */
+}
+.input-question.no-margin-bottom .input {
+  margin-bottom: 0; /* Remove margin-bottom */
+}
+.input__field--blue {
+  background-color: #acd6f9;
+}
+
+.input__field--green {
+  background-color: #8ff392;
+}
+
+.input__field--orange {
+  background-color: #f1cc94;
+}
+
+.add-quiz-card {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add-quiz-card-body {
+  border: 1px dashed #84a9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.add-quiz-card:hover .plus-icon {
+  transform: scale(2);
+}
+
+.plus-icon {
+  padding: 20px;
+  border-radius: 50%;
+  color: #84a9fa;
+  transition: transform 0.2s ease-in-out;
+}
+
+.add-icon {
+  font-size: 24px;
+}
+/* add disractor */
+.add-distractor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.horizontal-line {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 1px;
+  background-color: #84a9fa;
+  top: 50%;
+  left: 5px; /* Adjust the left position to center the line */
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0; /* Initially hide the horizontal line */
+  transition: opacity 0.3s ease; /* Add transition effect for smooth visibility */
+}
+
+.plus-icon1 {
+  position: relative;
+  padding: 0px;
+  border-radius: 100%;
+  color: #84a9fa; /* Change the color to white */
+  z-index: 2;
+  cursor: pointer;
+  background-color: #ffffff; /* Set the background color to blue */
+  opacity: 0; /* Initially hide the plus icon */
+  transition: opacity 0.3s ease; /* Add transition effect for smooth visibility */
+}
+
+.add-distractor:hover .plus-icon1 {
+
+  opacity: 1; /* Show the plus icon on hover */
+}
+.add-distractor:hover {
+  cursor: pointer;
+}
+ .add-distractor:hover .horizontal-line {
+  opacity: 1; /* Show the horizontal line on hover */
+  background-color: #84a9fa;
+}
+/* delete distractor */
+
+.delete-distractor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.horizontal-line-d {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 1px;
+  background-color: #ff0000;
+  top: 50%;
+  left: 5px; /* Adjust the left position to center the line */
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0; /* Initially hide the horizontal line */
+  transition: opacity 0.3s ease; /* Add transition effect for smooth visibility */
+}
+
+
+.delete-icon {
+  position: relative;
+  padding: 0px;
+  border-radius: 100%;
+  color: #ff0000; /* Set the color to red */
+  z-index: 2;
+  cursor: pointer;
+  background-color: #ffffff; /* Set the background color to white */
+  opacity: 0; /* Initially hide the delete icon */
+  transition: opacity 0.3s ease; /* Add transition effect for smooth visibility */
+}
+
+.delete-distractor:hover .delete-icon {
+  opacity: 1; /* Show the delete icon on hover */
+}
+
+.delete-distractor:hover {
+  cursor: pointer;
+}
+
+.delete-distractor:hover .horizontal-line-d {
+  opacity: 1; /* Show the horizontal line on hover */
+  background-color: #ff0000;
+}
+
+
+
+/* loading */
+
+.loading {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-text,
+.loading-button {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #f0f0f0;
+  pointer-events: none; /* Disable pointer events to make the button non-clickable */
+  margin-bottom: 10px;
+}
+
+
+.loading-text::before,
+.loading-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+  animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.invisible-text {
+  display: none;
+}
+
+
+
+/* card style */
+
+
+
+
+
+
+.card-title-two-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+@media (max-width: 768px) {
+  .card-title-two-line {
+    font-size: 20px; /* Adjust the font size for smaller screens */
+    width: 100%; /* Reset the width to occupy full width on smaller screens */
+    white-space: normal;
+  }
+}
+
+
+.card-body {
+  position: relative;
+  flex: 1 1 auto;
+  font-size: 16px;
+}
+
+.card-body p {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center; /* Vertically center the content */
+}
+
+.card-body p span {
+  margin-right: 10px; 
+  margin-left: 10px;
+  justify-content: center;
+  display: flex;
+  /* Add some spacing between the icon and text */
+}
+.card-body p:last-child {
+  margin-bottom: 0;
+}
+.not-card-body p{
+  display: block;
+}
+
+.circle-hover {
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  transition: color 0.3s;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-hover:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+.card-hover:hover {
+  cursor: pointer;
+  box-shadow: 0px 5px 0px 0px #b5d5ff;
+}
+@media screen and (max-width: 768px) {
+  .card-hover {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}
+/* go up button */
+
+.scroll-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: #5e8eff;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+
+.scroll-button:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .scroll-button {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+}
+/* profile */
+.email-button{
+  padding: auto;
+  background-color: transparent;
+  border: none;
+  color: #479aff;
+  font-size: 18px;
+}
+.email-button:hover{
+  padding: auto;
+  background-color: #ccc;
+
+}
+.edit-profile-button{
+margin-left: 10px;
+}
+.edit-profile-button:hover{
+  color: #479aff;
+  cursor: pointer;
+}
+.image-style{
+  width: 120px;
+  height: 120 px;
+}

@@ -1,0 +1,71 @@
+
+ .home {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+  }
+  
+  .home-content h1{
+font-weight: bolder;
+margin-bottom: 30px;
+  }
+  .home-content h4{
+    margin-bottom: 30px;
+      }
+  .home-content {
+    flex: 1;
+    padding: 80px;
+    width: 50%;
+  }
+
+
+
+  
+  .home button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .home button:hover {
+
+    background-color: #5baaff;
+
+  }
+
+  @media (max-width: 768px) {
+    .home {
+        
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+      }
+      .home-content {
+        flex: none;
+        padding: 20px;
+        width: 100%;
+      }
+    .home-content h1 {
+      font-size: 24px;
+    }
+    
+    .home-content h4 {
+      font-size: 14px;
+    }
+    .home button{
+        font-size: 12px;
+    }
+  }
+  
